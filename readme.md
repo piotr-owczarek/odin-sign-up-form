@@ -1,11 +1,11 @@
-# Calculator
+# Sign-Up Form
 
 Learning project - Sign-Up Form
 
 
 ## Demo
 
-https://szejku11.github.io/TBD
+https://szejku11.github.io/odin-sign-up-form
 
 ## Authors
 
