@@ -29,6 +29,8 @@ body {
 }
 
 .left {
+    display: flex;
+    flex-direction: column;
     background-image: url('/images/background.jpg');
     background-size: cover;
     width: 40vw;
@@ -53,6 +55,21 @@ body {
 
 .icon {
     height: 12vh;
+}
+
+.author {
+    color: rgb(255,255,255);
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.author>* {
+    font-size: 0.7rem;
+    margin-right: 2vw;
+}
+
+a {
+    color: inherit;
 }
 
 .right {
@@ -90,7 +107,7 @@ body {
 
 .bottom {
     justify-content: flex-start;
-    margin-top: 10px;
+    margin-top: 6px;
     padding-top: 10px;
 }
 
@@ -112,10 +129,22 @@ form>* {
     flex: 0 1 33%;
 } 
 
+input:focus {
+    border: 2px solid rgb(61, 61, 243);
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.342);
+    outline: none;
+}
+
+input:invalid:focus {
+    border: 2px solid rgb(243, 82, 61);
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.342);
+    outline: none;
+}
+
 button {
     background-color: #596D48;
     color: rgb(255,255,255);
-    padding: 10px 20px;
+    padding: 10px 45px;
     font-size: 0.75rem;
     border-radius: 5px;
 }
@@ -128,4 +157,10 @@ button {
 
 .bottom-text {
     display: flex;
+}
+
+.error {
+    white-space: pre;
+    height: 5vh;
+    color: rgb(243, 82, 61);
 }

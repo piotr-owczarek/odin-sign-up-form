@@ -15,6 +15,9 @@
                 <img class="icon" src="/images/odin-icon.png" alt="odin-icon">
                 <p>ODIN</p>
             </div>
+            <div class="author">
+                <p>Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/photos/25xggax4bSA">Unsplash.</a></p>
+            </div>
         </div>
 
         <div class="right">
@@ -30,32 +33,39 @@
                 <form action="">
                     <div class="box" >
                         <label for="first-name">FIRST NAME</label>
-                        <input type="text" name="first-name" id="first-name" required>
+                        <input type="text" name="first-name" id="first-name" placeholder="John" required>
                      </div>
     
                     <div class="box">
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" name="last-name" id="last-name" required>
+                        <input type="text" name="last-name" id="last-name" placeholder="Smith" required>
                     </div>
     
                     <div class="box">
                         <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email" required>
+                        <input type="email" name="email" id="email" 
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+                        placeholder="qwerty@mail.com" required>
                     </div>
                     
                     <div class="box">
                         <label for="phone-number">PHONE NUMBER</label>
-                        <input type="tel" name="phone-number" id="phone-number" required>
+                        <input type="tel" name="phone-number" id="phone-number" 
+                        pattern='^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{3,6}$' 
+                        placeholder="123 456 789" required>
                     </div>
                         
                     <div class="box">
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="password" id="password" required>
+                        <input type="password" name="password" id="password" 
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$" required>
+                        <div id="password-error" class="error"></div>
                     </div>
                         
                     <div class="box">
                         <label for="password-check">CONFIRM PASSWORD</label>
                         <input type="password" id="password-check" required>
+                        <div id="password-check-error" class="error"></div>
                     </div>
             </div>
 
