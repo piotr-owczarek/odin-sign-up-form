@@ -8,6 +8,11 @@ html {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
 p {
     margin-top: 1vh;
     margin-right: 8vw;
@@ -15,9 +20,8 @@ p {
     font-size: 0.9rem;
 }
 
-body {
-    margin: 0px;
-    padding: 0px;
+a {
+    color: inherit;
 }
 
 .container {
@@ -28,6 +32,7 @@ body {
     height: 100vh;
 }
 
+/* left side of container and its elements */
 .left {
     display: flex;
     flex-direction: column;
@@ -68,10 +73,7 @@ body {
     margin-right: 2vw;
 }
 
-a {
-    color: inherit;
-}
-
+/* right side of container and its elements */
 .right {
     display: flex;
     flex-direction: column;
@@ -163,4 +165,76 @@ button {
     white-space: pre;
     height: 5vh;
     color: rgb(243, 82, 61);
+}
+
+/* smaller resolution */
+@media screen and (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        margin: 0 0;
+    }
+
+    .left {
+        width: auto;
+        height: 200px;
+        background-size: cover;
+    }
+
+    .logo {
+        margin-top: 5vh;
+    }
+
+    .logo p {
+        font-size: 2.2rem;
+        margin: 0;
+    }
+    
+    .icon {
+        height: 8vh;
+    }
+    
+    .author {
+        color: rgb(255,255,255);
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .author>* {
+        font-size: 0.5rem;
+    }
+
+    .right {
+        width: 100vw;
+        margin: 0 5px;
+        padding: 0;
+        text-align: center;
+    }
+
+    p {
+        margin: 7px 15px;
+        padding: 0;
+    }
+
+    .top,
+    .middle,
+    .bottom {
+        padding: 0;
+        align-items: center;
+    }
+
+    form {
+        display: inline-block;
+        width: 60vw;
+    }
+    
+    input {
+        margin-bottom: 6px;
+    }
+
+    .error {
+        height: auto;
+    }
 }
