@@ -2,13 +2,16 @@ const pwdCheck = document.querySelector('#password-check');
 const pwdCheckErr = document.querySelector('#password-check-error');
 const pwd = document.querySelector('#password');
 const pwdErr = document.querySelector('#password-error');
+const btnSubmit = document.querySelector('button');
 
 function checkPasswords() {
     if (pwdCheck.value !== pwd.value) {
         pwdCheckErr.textContent = 'Passwords do not match';
+        btnSubmit.setAttribute('disabled','');
     }
     else {
         pwdCheckErr.textContent = '';
+        btnSubmit.removeAttribute('disabled');
     }
 }
 
@@ -24,6 +27,6 @@ pwd.addEventListener('input', () => {
     if (!regExpDig.test(pwd.value)) result += 'Need at least 1 number. \r\n';
     if (pwd.value.length < 8) result += 'Need at least 8 characters.';
 
-    console.log(result)
     pwdErr.textContent = result;
+
 })
